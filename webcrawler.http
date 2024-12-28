@@ -1,0 +1,65 @@
+POST http://localhost:3000/register
+Content-Type : application/json
+
+{
+    "username" : "Sreekanth",
+    "password" : "Sreekanth@2021",
+    "gender" : "male",
+    "name" : "Sreekanthlucky"
+}
+
+POST http://localhost:3000/login
+Content-Type : application/json
+
+{
+    "username" :  "Sreekanth",
+    "password" : "Sreekanth@2021"
+}
+
+
+GET http://localhost:3000/domains/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyZWVrYW50aCIsImlhdCI6MTczNTM2MDk1Nn0.E74SV3zHG5gJftPp5ug7adG2EUl79TrPZRQ-JXpaImE
+####
+
+
+GET http://localhost:3000/domains/1/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyZWVrYW50aCIsImlhdCI6MTczNTM2MDk1Nn0.E74SV3zHG5gJftPp5ug7adG2EUl79TrPZRQ-JXpaImE
+###
+
+GET http://localhost:3000/producturls/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyZWVrYW50aCIsImlhdCI6MTczNTM2MDk1Nn0.E74SV3zHG5gJftPp5ug7adG2EUl79TrPZRQ-JXpaImE
+###
+GET http://localhost:3000/producturls/1/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyZWVrYW50aCIsImlhdCI6MTczNTM2MDk1Nn0.E74SV3zHG5gJftPp5ug7adG2EUl79TrPZRQ-JXpaImE
+###
+
+GET http://localhost:3000/domain/producturl/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyZWVrYW50aCIsImlhdCI6MTczNTM2MDk1Nn0.E74SV3zHG5gJftPp5ug7adG2EUl79TrPZRQ-JXpaImE
+###
+
+POST http://localhost:3000/domain/crawl/ 
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyZWVrYW50aCIsImlhdCI6MTczNTM2MDk1Nn0.E74SV3zHG5gJftPp5ug7adG2EUl79TrPZRQ-JXpaImE
+Content-Type: application/json
+
+{
+    "domain" : "Amazon.com"
+}
+
+POST http://localhost:3000/product/url/crawl/ 
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyZWVrYW50aCIsImlhdCI6MTczNTM2MDk1Nn0.E74SV3zHG5gJftPp5ug7adG2EUl79TrPZRQ-JXpaImE
+Content-Type: application/json
+{
+    "domainId" : 1,
+    "url" :"https://www.amazon.in/Amazon-Brand-Presto-Oxo-Biodegradable-Garbage/dp/B0821PN8L4/ref=sr_1_1?_encoding=UTF8&content-id=amzn1.sym.4d494d65-8009-406a-9a50-5e08a16212d7&dib=eyJ2IjoiMSJ9.rgn9HH6xLISq2o9TOt58_JaiUD50bUBBcFWFpFmh0xVWkbLvKAPnMMP9zGQYbk7snaL5XD4s_wPUuf5H0XCeQH9gBk4REj4ko8oYWOh5GUPU-8GsOryXgE1RCHQ28_NweWivqScpA8pTxRgqt1-UE2sWTGVlZ80_299yDwsWKubqHnCIGt1fTghxT9LywVJhEonVfjl_ILesKh6JgLgPsxabZldmZ0WAzzOsajd5k19k8SlPpwhxN1r4G1r1-fyVNfHXK1u9Oqg2i3upvcQbQUGE-pbPKZ77RWvoLx26ifKlsVakI9L_Wm48dW_-js4etDIqryHO6xuJWyjrrBFuyA1JjggV1lM-D8TkCDlkwoc.6xDAQFP_CPzS_i2qkt1YLQuHxdx3YxYh4-8x-c5odtY&dib_tag=se&pd_rd_r=87cf9530-990e-490e-9659-e8cd8996aff9&pd_rd_w=DDaYA&pd_rd_wg=ZbLjQ&pf_rd_p=4d494d65-8009-406a-9a50-5e08a16212d7&pf_rd_r=ZXZNAFJTS0Y05F02W4MP&qid=1735215178&refinements=p_n_format_browse-bin%3A19560790031&s=kitchen&sr=1-1&th=1"
+}
+
+###
+
+DELETE http://localhost:3000/product/url/5/23
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtyaXNobmEiLCJpYXQiOjE3MzUyMTQ3MzB9.xi7WTrd1g_cn0b0N_j4EKj9IIWKBsePasP_JAXRb_UM
+###
+
+
+GET http://localhost:3000/domains/1
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtyaXNobmEiLCJpYXQiOjE3MzUyMTQ3MzB9.xi7WTrd1g_cn0b0N_j4EKj9IIWKBsePasP_JAXRb_UM
+###
